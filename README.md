@@ -17,11 +17,11 @@ Compare GPT2 vs DistilGPT2 for text generation with energy usage, carbon emissio
 3. **Install dependencies:**
     ```bash
     pip install -r requirements.txt
-
-    If you encounter issues with `requirements.txt`, you can manually install the main dependencies:
-    ```bash
-    pip install torch transformers codecarbon 
     ```
+   
+    ```bash
+    If you encounter issues with `requirements.txt`, you can manually install the main dependencies:
+    pip install torch transformers codecarbon 
     ```
 
 ## Results Explanation
