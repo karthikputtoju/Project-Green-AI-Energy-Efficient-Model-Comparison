@@ -1,14 +1,14 @@
 {
     "distilgpt2": {
-        "Energy consumption (kWh)": 0.0,
-        "CO₂ emissions (kg)": 8.9e-05,
-        "Inference time (s)": 12.783,
+        "Energy consumption (kWh)": 0.000100,
+        "CO₂ emissions (kg)": 4.7e-05,
+        "Inference time (s)": 6.834,
         "Output quality (chars)": 1214
     },
     "gpt2": {
-        "Energy consumption (kWh)": 0.0,
-        "CO₂ emissions (kg)": 0.000139,
-        "Inference time (s)": 20.01,
+        "Energy consumption (kWh)": 0.000126,
+        "CO₂ emissions (kg)": 6e-05,
+        "Inference time (s)": 8.625,
         "Output quality (chars)": 1280
     }
 }
