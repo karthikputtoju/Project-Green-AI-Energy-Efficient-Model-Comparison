@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Constants for metric keys
+# Constants for metric keys and labels
 ENERGY_CONSUMPTION = "Energy consumption (kWh)"
 CO2_EMISSIONS_KG = "CO₂ emissions (kg)"
 CO2_EMISSIONS_G = "CO₂ emissions (g)"
