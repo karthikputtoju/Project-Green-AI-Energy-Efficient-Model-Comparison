@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=flat&logo=python)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ML-brightgreen?style=flat&logo=tensorflow)
+![Generative AI](https://img.shields.io/badge/Generative%20AI-Green%20AI%20Project-orange?style=flat&logo=openaigym)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 # Green AI – Energy Efficient Model Comparison
 
 This project demonstrates a real-world application of **Green AI** by comparing two popular Hugging Face models:
