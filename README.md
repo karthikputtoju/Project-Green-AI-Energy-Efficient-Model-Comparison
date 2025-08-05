@@ -123,7 +123,7 @@ metrics/performance_metrics.json:
 - Tracking environmental impact is key for Green AI adoption in ML projects.
 
 ## License
-- This project is licensed under the MIT License – free to use and if anyone want to contribute to reach out to me.
+- This project is licensed under the MIT License – free to use and if anyone want to contribute to this project, please reach out to me.
 
 ## Acknowledgments
 - Hugging Face Transformers
