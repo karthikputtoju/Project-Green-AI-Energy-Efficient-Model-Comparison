@@ -109,6 +109,7 @@ metrics/performance_metrics.json:
 - 🟢 Good – Best performer for that metric
 - 🟧 Better – Mid performer
 - 🔴 Bad – Lowest performer
+<img width="1886" height="1060" alt="image" src="https://github.com/user-attachments/assets/d57f4d9a-fe68-49b4-b8fb-7ec2afb63a96" />
 
 
 ## Key Learnings
