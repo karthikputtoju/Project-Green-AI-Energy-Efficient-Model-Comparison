@@ -34,8 +34,8 @@ This project **proves** that smaller models can often give **similar results** w
 ---
 
 ## Project Structure
----
 
+```
 green-ai-model-comparison/
 ├── README.md
 ├── requirements.txt
@@ -48,7 +48,7 @@ green-ai-model-comparison/
 │ ├── gpt2_emissions.csv
 │ └── performance_metrics.json
 │ └── chart.py
-
+```
 
 ##  Installation & Setup
 
@@ -78,14 +78,13 @@ python green_ai_comparison.py
 
 ```
 This will:
-Run DistilGPT2 & GPT2 on the same prompt
-Track energy usage, CO₂ emissions, and inference time with CodeCarbon
+- Run DistilGPT2 & GPT2 on the same prompt
+- Track energy usage, CO₂ emissions, and inference time with CodeCarbon
 
 Save:
-
-Generated text → outputs/
-Metrics in JSON & CSV → metrics/
-Color-coded performance chart → assets/
+- Generated text → outputs/
+- Metrics in JSON & CSV → metrics/
+- Color-coded performance chart → metrics/
 
 ## Example Results
 metrics/performance_metrics.json:
@@ -107,20 +106,18 @@ metrics/performance_metrics.json:
 ```
 
 ## Visual Comparison
-🟢 Good – Best performer for that metric
-🟧 Better – Mid performer
-🔴 Bad – Lowest performer
+- 🟢 Good – Best performer for that metric
+- 🟧 Better – Mid performer
+- 🔴 Bad – Lowest performer
 
 
 ## Key Learnings
-Smaller models can use less energy, but not always faster on every run.
-
-Energy use & CO₂ emissions are measurable in real-time.
-
-Tracking environmental impact is key for Green AI adoption in ML projects.
+- Smaller models can use less energy, but not always faster on every run.
+- Energy use & CO₂ emissions are measurable in real-time.
+- Tracking environmental impact is key for Green AI adoption in ML projects.
 
 ## License
-This project is licensed under the MIT License – free to use and modify.
+- This project is licensed under the MIT License – free to use and if anyone want to contribute to reach out to me.
 
 ## Acknowledgments
 - Hugging Face Transformers
