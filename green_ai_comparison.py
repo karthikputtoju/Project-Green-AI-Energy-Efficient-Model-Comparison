@@ -1,3 +1,4 @@
+# green_ai_comparison.py
 
 import time
 import json
@@ -27,20 +28,38 @@ for model_name in MODELS:
     end_time = time.time()
 
     tracker.stop()
+    emissions_data = getattr(tracker, "final_emissions", None) or getattr(tracker, "_final_emissions_data", None)
 
     generated_text = generated[0]['generated_text']
 
     with open(f"outputs/{model_name}_output.txt", "w", encoding="utf-8") as f:
         f.write(generated_text)
 
+    if emissions_data is not None:
+        # If emissions_data is a float, treat it as emissions_kg and set energy_kwh to 0.0
+        if isinstance(emissions_data, dict):
+            energy_kwh = round(emissions_data.get("energy_consumed", 0.0), 6)
+            emissions_kg = round(emissions_data.get("emissions", 0.0), 6)
+        else:
+            energy_kwh = 0.0
+            emissions_kg = round(float(emissions_data), 6)
+    else:
+        energy_kwh = 0.0
+        emissions_kg = 0.0
+
+    inference_time = round(end_time - start_time, 3)
+    output_quality = len(generated_text)
+
     results[model_name] = {
-        "time_taken_sec": round(end_time - start_time, 3),
-        "output_length_tokens": len(generated_text.split()),
-        "generated_text": generated_text
+        "Energy consumption (kWh)": energy_kwh,
+        "CO₂ emissions (kg)": emissions_kg,
+        "Inference time (s)": inference_time,
+        "Output quality (chars)": output_quality
     }
 
 # Save metrics
 with open("metrics/performance_metrics.json", "w", encoding="utf-8") as f:
-    json.dump(results, f, indent=4)
+    json.dump(results, f, indent=4, ensure_ascii=False)
 
 print("\n All generations completed. Check 'outputs/' and 'metrics/' folders.")
+
