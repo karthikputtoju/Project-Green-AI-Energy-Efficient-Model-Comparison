@@ -110,6 +110,53 @@ metrics/performance_metrics.json:
 }
 ```
 
+## Calculation Results with using Formulas
+```
+1. Energy Consumption (kWh)
+---------------------------
+Energy used is calculated from the hardware power draw and inference runtime:
+
+Energy (kWh) = Power (Watts) × Time (seconds) / 1000 × 3600	​
+Power (Watts): GPU/CPU power usage while running the model.
+Time (seconds): How long inference took.
+1000×3600 to convert from Joules → kWh.
+
+Example for GPT2:
+If GPU uses ~45W and runs for 8.625s:
+
+Energy = 45 × 8.625 / 3,600,000 ≈ 0.000126 kWh
+
+2. CO₂ Emissions (grams)
+------------------------
+Once energy consumption is known, CO₂ emissions are derived using the Carbon Intensity Factor of electricity (varies by country, avg. ~0.475 g per Wh).
+
+CO₂ (g) = Energy (kWh) × 1000 × Carbon Intensity (g/Wh)
+Energy in kWh → convert to Wh by multiplying with 1000.
+Multiply by CO₂ factor (g/Wh).
+
+Example for DistilGPT2:
+0.000100 kWh × 1000 × 0.47 ≈ 0.047g CO₂
+
+3. Inference Time (seconds)
+---------------------------
+This is measured directly using a timer:
+
+Inference Time = End Time − Start Time
+
+For DistilGPT2 → 6.834s
+For GPT2 → 8.625s
+
+4. Output Quality (chars)
+-------------------------
+This is a proxy metric → counts how many characters were generated in the model’s response.
+
+Output Quality (chars) = Length of generated text in characters
+
+DistilGPT2 → 1214 chars
+GPT2 → 1280 chars
+
+```
+
 ## Visual Comparison
 - 🟢 Good – Best performer for that metric
 - 🟧 Better – Mid performer
