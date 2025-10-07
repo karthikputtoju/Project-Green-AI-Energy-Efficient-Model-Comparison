@@ -169,8 +169,13 @@ GPT2 → 1280 chars
 - Energy use & CO₂ emissions are measurable in real-time.
 - Tracking environmental impact is key for Green AI adoption in ML projects.
 
+---
+## Author
+**Karthik Puttoju**  
+https://github.com/karthikputtoju
+
 ## License
-- This project is licensed under the MIT License – free to use and if anyone want to contribute to this project, please reach out to me.
+This project is licensed under the MIT License – free to use and if anyone want to contribute to this project, please reach out to me.
 
 ## Acknowledgments
 - Hugging Face Transformers
